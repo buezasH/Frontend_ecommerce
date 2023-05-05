@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: Hack, monospace;
+}
+
+.logopag p{
+  font-size: 96px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 1s ease-in-out;
+  position: relative;
+  
+}
+.logopag p::before {
+  content: attr(data-item);
+  transition: all 1s ease-in-out;
+  color: #8254ff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+.logopag p:hover::before {
+  width: 100%;
+}
+.logopag img{
+  width: auto;
+  max-width:179px;
+  height: auto;
+  max-height:100px;
+  display: block;
+  margin: 0 auto;
+  padding:0;
+  position: relative;
+}
+nav {
+  margin: 0px;
+  background: #f9f9f9;
+  padding: 0px;
+}
+nav .menuItems ul{
+  list-style: none;
+  display: flex;
+}
+nav .menuItems li {
+  margin: 50px;
+  width: auto;
+  height: auto;
+}
+nav .menuItems li a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+nav .menuItems li a::before {
+  content: attr(data-item);
+  transition: 0.5s;
+  color: #8254ff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+nav .menuItems li a:hover::before {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.toggle-button {
+	position:absolute;
+	top: 10.5rem;
+	right: 1rem;
+	display:none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 40px;
+	height: 23px;
+}
+.toggle-button .bar {
+	height: 3px;
+	width: 100%;
+	background-color: #8f8f8f;
+	border-radius: 10px;
+}
+@media (max-width: 850px){
+	.toggle-button{
+		display: flex;
+	}
+	.menuItems {
+		display: none;
+		width:100%;
+	}
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.menuItems ul {
+		width:100%;
+		flex-direction: column;
+	}
+	.menuItems li {
+		text-align: center;
+	}
+	.menuItems li a {
+		padding: .5rem 1rem;
+	}
+	
+	.menuItems.active {
+		display:flex;
+	}
+}
+
+.rss {
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	max-width: 200px;
+	text-align: center;
+	margin: auto;
+	width: 50%;
+}
+.foot {
+  background: rgb(37, 37, 37);
+  color:white;
+  padding: 0px;
+  margin-top: 5px;
+  text-align: center;
+  width:100%;
+  position: relative;
+  bottom: 0px;
+}
+

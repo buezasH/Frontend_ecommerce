@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+<meta charset="UTF-8">
+<title>Carrito</title>
+</head>
+<body>
+	<script>MostrarCarrito();</script>
+	<div class="container-fluid ">
+	    <div class="col-md-9 col-sm-8 content">
+	        <div class="row">
+	            <div class="col-md-12">
+	                <div class="panel panel-info panel-sombra">
+	                    <div class="panel-heading">
+		                    <div class="d-flex justify-content-center">
+		                   		<img src="./img/skysh.png" alt="SkySH Logo" style="width:100px;" class="rounded-pill"> 
+		                    </div>
+	                    </div>
+	                    <div> 
+	                        <div class="table-responsive">
+		                        <table class="table">
+		                            <thead>
+		                            <tr>
+		                                <th>Producto</th>
+		                                <th>Descripcion</th>
+		                                <th>Cant</th>
+		                                <th>Precio</th>
+		                                <th>SubTotal</th>
+										<th></th>
+		                            </tr>
+		                            </thead>
+									<tbody id="carrito">
+										<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+									</tbody>
+									<tfoot id="total">
+									</tfoot>
+		                        </table>
+		                         <button id="comprar" class="btn btn-success" onclick="EnviarCarrito('RecogerCarrito.html','cuerpo',obtenerCarrito())"> Comprar! </button>
+	                    	</div>
+	                	</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>
